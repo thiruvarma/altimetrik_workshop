@@ -1,6 +1,6 @@
 package com.altimetrik.workshop.vehicleservice.model;
 
-import java.util.List;
+import java.util.LinkedList;
 
 //
 //<Count>142</Count>
@@ -17,7 +17,7 @@ import java.util.List;
 //</DecodedVariable>
 
 public class Vehicle {
-	private List<VehicleDecodedVariable> vehicleVariableList;
+	private LinkedList<VehicleDecodedVariable> vehicleVariableList;
 	private int count;
 	private String message;
 
@@ -25,17 +25,17 @@ public class Vehicle {
 
 	}
 
-	public Vehicle(List<VehicleDecodedVariable> vehicleVariableList, int count, String message) {
+	public Vehicle(LinkedList<VehicleDecodedVariable> vehicleVariableList, int count, String message) {
 		this.vehicleVariableList = vehicleVariableList;
 		this.count = count;
 		this.message = message;
 	}
 
-	public List<VehicleDecodedVariable> getVehicleVariableList() {
+	public LinkedList<VehicleDecodedVariable> getVehicleVariableList() {
 		return vehicleVariableList;
 	}
 
-	public void setVehicleVariableList(List<VehicleDecodedVariable> vehicleVariableList) {
+	public void setVehicleVariableList(LinkedList<VehicleDecodedVariable> vehicleVariableList) {
 		this.vehicleVariableList = vehicleVariableList;
 	}
 
