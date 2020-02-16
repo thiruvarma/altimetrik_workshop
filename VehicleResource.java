@@ -21,16 +21,6 @@ public class VehicleResource {
 	@RequestMapping("/getVehicleInfo/{vin}")
 	public List<VehicleDecodedVariable> getVehicleDetails(@PathVariable("vin") String vehicleVin) throws Exception {
 		RestTemplate template = new RestTemplate();
-//
-//		 ClientHttpRequestFactory requestFactory = new
-//		 HttpComponentsClientHttpRequestFactory(HttpClients.createDefault());
-//		 RestTemplate restTemplate = new RestTemplate(requestFactory);
-
-//		RestTemplate restTemplate = new RestTemplate();
-//		MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter = new MappingJackson2HttpMessageConverter();
-//		mappingJackson2HttpMessageConverter.setSupportedMediaTypes(Arrays.asList(MediaType.APPLICATION_JSON, MediaType.APPLICATION_OCTET_STREAM));
-//		restTemplate.getMessageConverters().add(mappingJackson2HttpMessageConverter);
-//		
 
 		Vehicle vehicle = template
 				.getForObject("https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinExtended/" + vehicleVin, Vehicle.class);
